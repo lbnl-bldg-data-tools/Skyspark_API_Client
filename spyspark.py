@@ -34,7 +34,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 import scram
 
 # Define constants
-DEFAULT_URL = "http://skyspark.test_site.gov/api/test_site/" # CHANGE TO YOUR INSTANCE
+DEFAULT_URL = None # CHANGE TO YOUR URL INSTANCE IF NEEDED
 CONFIG_FILE = "./spyspark.cfg"
 MAX_ATTEMPTS = 3
 tu = ts_util() # For data quality analysis
