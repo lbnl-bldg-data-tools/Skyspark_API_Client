@@ -34,7 +34,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 import scram
 
 # Define constants
-DEFAULT_URL = "http://skyspark.lbl.gov/api/lbnl/"
+DEFAULT_URL = "http://skyspark.test_site.gov/api/test_site/" # CHANGE TO YOUR INSTANCE
 CONFIG_FILE = "./spyspark.cfg"
 MAX_ATTEMPTS = 3
 tu = ts_util() # For data quality analysis
@@ -549,6 +549,7 @@ class spyspark_client(object):
             return df     
 ###############################################################################
 # Function to create list of clickable options to exclude meters from analysis
+# Specific to LBNL implementation
     def show_clickable_options(self):
         
         """ Function generates button widget for each option for point exclusion.
@@ -752,6 +753,7 @@ class spyspark_client(object):
         return (100 - percent_bad)
 ###############################################################################
 # Helper function to return list of dates that we will be running the analysis on for meter quality checks
+# Specific to LBNL implementation
     def get_dates_list(self, worksheet, month_range):
         
         """ Helper function to run_analysis_from_meta() to generate list of dates for meter analysis.
@@ -787,6 +789,7 @@ class spyspark_client(object):
         return dateList
 ###############################################################################
 # Helper function to build query string with appropriate return points specified
+# Specific to LBNL implementation
     def _construct_query(self, link_number, start_date, end_date):
         """ Helper function to build Skyspark query string with appropriate points excluded
         
@@ -824,7 +827,8 @@ class spyspark_client(object):
 
 ###############################################################################
 # Function takes in dataframe of metadata information and url of GoogleSheets wanting to compare to
-    # Returns a dataframe of meter comparison to GoogleSheets  
+    # Returns a dataframe of meter comparison to GoogleSheets
+    # Specific to LBNL implementation
  
     def run_analysis_from_meta(self, metadata, Sheets_url, month_range, save_each_meter_to_csv=False):
         
