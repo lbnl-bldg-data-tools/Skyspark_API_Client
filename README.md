@@ -26,5 +26,3 @@ the database based on metadata tags or composed Axon queries and return time ser
 * **Jacob Rodriguez** - *Skyspark client, documentation, and code cleanup* - [Github](https://github.com/JacobBRodriguez)
 * **Marco Pritoni** - *Skyspark client, TS Util functions*
 * **Raphael Vitti** - *Skyspark client, scram authentication scripts*
-## Contributing
-As of *3/25/2019*, [Chris Weyandt](https://github.com/cweyandt) manages this repo. Please contact him if you wish to contribute to any aspect of this project.
